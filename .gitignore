@@ -1,0 +1,30 @@
+# Virtual Environment
+venv/
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# Environment Variables
+.env
+
+# Database
+*.db
+
+# Uploads
+uploads/
+
+# Pytest Cache
+.pytest_cache/
+
+# VS Code
+.vscode/
+
+# Linux/Mac OS files
+.DS_Store
+
+# Logs
+*.log
+
+# Personal roadmap docs
+AI_ENGINEER_ROADMAP_180_DAYS.pdf
