@@ -4,7 +4,7 @@ from fastapi import BackgroundTasks
 from app.services.notification_service import send_email
 from app.config import MAX_FILE_SIZE
 from app.schemas import FileResponse
-from app.services.file_service import save_file, get_all_files
+from app.services.file_service import save_file, get_all_files,get_file_by_id,delete_file_by_id
 
 router = APIRouter()
 
@@ -34,4 +34,13 @@ async def notify(
 @router.get("/files",response_model=List[FileResponse])
 def get_files():
 	return get_all_files()
+
+@router.get("/files/{file_id}")
+def fetch_file(file_id:int ):
+    file_record=get_file_by_id(file_id)
+    return file_record
+@router.delete("/files/{file_id}")
+def del_file(file_id:int):
+    file_del=delete_file_by_id(file_id)
+    return file_del
 
