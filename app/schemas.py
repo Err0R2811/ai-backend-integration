@@ -5,5 +5,4 @@ class FileResponse(BaseModel):
 	filename:str
 
 class ErrorResponse(BaseModel):
-	error:str
-
+	detail: str
